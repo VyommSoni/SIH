@@ -59,7 +59,7 @@ Most systems find problems **after** submission. AAROHAN finds them **before**: 
 | **Officer / Verifier** | Sees an AI case summary, extracted data, proof and confidence. Less repeated manual work |
 | **Ministry / Admin** | Sees KPIs, bottlenecks and repeated problems. Manages scheme rules. Views the audit trail |
 
-###  Key features
+### ✨ Key features
 
 | Area | Features |
 |---|---|
@@ -70,7 +70,7 @@ Most systems find problems **after** submission. AAROHAN finds them **before**: 
 | **Ministry & Support** | Analytics funnel, state and district trends, process insights, grievance workflow, post-selection and renewal tracking, audit logs |
 | **Saathi (Scholarship Copilot)** | RAG assistant that answers **only** from official documents, with sources |
 
-###  Explainable eligibility (example)
+### 🧩 Explainable eligibility (example)
 
 Eligibility comes from **official rules stored in the database**, never from an AI guess.
 
@@ -86,7 +86,7 @@ If a rule isn't met, we say so kindly, show the requirement and the student's va
 
 An open estimate from five visible factors: eligibility completeness, document completeness, document quality, profile consistency, application completeness. It answers: *"If I submit now, how likely am I to face an avoidable deficiency?"* It is **not** government approval.
 
-###  Fix My Application (example)
+### 🛠️ Fix My Application (example)
 
 - **Problem:** Income certificate could not be verified with confidence.
 - **Why:** The photo is partly blurred.
@@ -94,7 +94,6 @@ An open estimate from five visible factors: eligibility completeness, document c
 - **Recheck:** Checks re-run automatically and the readiness score updates.
 
 ---
-<img width="1600" height="1520" alt="WhatsApp Image 2026-09-30 at 5 34 34 PM" src="https://github.com/user-attachments/assets/8a43457c-458d-4320-9a99-521d6cc193e5" />
 
 ## 📸 Screenshots
 
@@ -133,7 +132,7 @@ flowchart TD
 
 **Design choices:** no business logic in the UI, rules live in the database, and slow work (OCR) runs in the background so the screen never freezes.
 
-###  Golden rule: the AI never decides eligibility
+### 🔑 Golden rule: the AI never decides eligibility
 
 | Component | Role |
 |---|---|
@@ -151,15 +150,7 @@ flowchart LR
 ```
 
 | Tool | Job |
-|---|---|<img width="1600" height="1520" alt="WhatsApp Image 2026-09-30 at 5 34 34 PM" src="https://github.com/user-attachments/assets/c7a530e1-d96b-429f-bc6c-78b9788b5600" />
-<img width="1600" height="1520" alt="WhatsApp Image 2026-09-30 at 5 34 34 PM" src="https://github.com/user-attachments/assets/0fbc2a54-dc1b-42fe-b9db-c246a01940b6" />
-<img width="1600" height="1520" alt="WhatsApp Image 2026-09-30 at 5 34 34 PM" src="https://github.com/user-attachments/assets/1e8215dc-c32c-4e6b-84a0-73fcf5bbdc23" />
-<img width="1600" height="1520" alt="WhatsApp Image 2026-09-30 at 5 34 34 PM" src="https://github.com/user-attachments/assets/592987db-32a3-4832-8506-bb4f9dbfebb1" />
-<img width="1600" height="1520" alt="WhatsApp Image 2026-09-30 at 5 34 34 PM" src="https://github.com/user-attachments/assets/488b6d27-2a76-4f1a-8a00-bfe05d9686d6" />
-<img width="1600" height="1520" alt="WhatsApp Image 2026-09-30 at 5 34 34 PM" src="https://github.com/user-attachments/assets/b638086b-fc39-4655-a5ff-e53b080f2676" />
-<img width="1600" height="1520" alt="WhatsApp Image 2026-09-30 at 5 34 34 PM" src="https://github.com/user-attachments/assets/d8c7166f-fc31-44c6-b4b2-ddbeb0cb1f8b" />
-<img width="1600" height="1520" alt="WhatsApp Image 2026-09-30 at 5 34 34 PM" src="https://github.com/user-attachments/assets/3d1ca3fe-b559-4682-8620-29c47ed227af" />
-
+|---|---|
 | **PaddleOCR** | Main OCR for printed and multilingual text, with text boxes |
 | **Tesseract** | Backup OCR when confidence is low |
 | **TrOCR** | Handwriting, on cropped text-line areas only |
@@ -220,7 +211,10 @@ Uses only retrieved official information · never invents rules, deadlines or am
 
 ---
 
-##  5. How do we run it?
+## <img width="1600" height="1520" alt="WhatsApp Image 2026-09-30 at 5 34 34 PM (1)" src="https://github.com/user-attachments/assets/23177414-448e-4cb5-ad08-0ff421141cf3" />
+<img width="1600" height="1520" alt="WhatsApp Image 2026-09-30 at 5 34 34 PM (1)" src="https://github.com/user-attachments/assets/ae1bbe0f-9a17-44c5-a89b-ec6746aff6d5" />
+
+ 5. How do we run it?
 
 ```bash
 # 1. Clone
@@ -277,7 +271,7 @@ aarohan/
 └── README.md
 ```
 
-### 🎬 Demo flow (for judges)
+###  Demo flow (for judges)
 
 1. Log in as **Student** → find a scholarship → see eligibility with proof
 2. Upload a blurry income certificate → **Fix My Application** explains and guides

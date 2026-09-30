@@ -55,11 +55,11 @@ Most systems find problems **after** submission. AAROHAN finds them **before**: 
 
 | Role | How AAROHAN helps |
 |---|---|
-| 👩‍🎓 **Student** | Finds the right scheme, understands the rules, fixes document issues before submitting, tracks status in their own language |
-| 🧑‍💼 **Officer / Verifier** | Sees an AI case summary, extracted data, proof and confidence. Less repeated manual work |
-| 🏛️ **Ministry / Admin** | Sees KPIs, bottlenecks and repeated problems. Manages scheme rules. Views the audit trail |
+| **Student** | Finds the right scheme, understands the rules, fixes document issues before submitting, tracks status in their own language |
+| **Officer / Verifier** | Sees an AI case summary, extracted data, proof and confidence. Less repeated manual work |
+| **Ministry / Admin** | Sees KPIs, bottlenecks and repeated problems. Manages scheme rules. Views the audit trail |
 
-### ✨ Key features
+###  Key features
 
 | Area | Features |
 |---|---|
@@ -70,15 +70,15 @@ Most systems find problems **after** submission. AAROHAN finds them **before**: 
 | **Ministry & Support** | Analytics funnel, state and district trends, process insights, grievance workflow, post-selection and renewal tracking, audit logs |
 | **Saathi (Scholarship Copilot)** | RAG assistant that answers **only** from official documents, with sources |
 
-### 🧩 Explainable eligibility (example)
+###  Explainable eligibility (example)
 
 Eligibility comes from **official rules stored in the database**, never from an AI guess.
 
 | Requirement | Student's value | Result | Proof |
 |---|---|---|---|
-| ST category | ST | ✅ | Category certificate |
-| Academic qualification | Eligible course | ✅ | Marksheet |
-| Income limit | Within limit | ✅ | Income certificate |
+| ST category | ST | Met | Category certificate |
+| Academic qualification | Eligible course | Met | Marksheet |
+| Income limit | Within limit | Met | Income certificate |
 
 If a rule isn't met, we say so kindly, show the requirement and the student's value, and suggest other schemes that may fit.
 
@@ -86,7 +86,7 @@ If a rule isn't met, we say so kindly, show the requirement and the student's va
 
 An open estimate from five visible factors: eligibility completeness, document completeness, document quality, profile consistency, application completeness. It answers: *"If I submit now, how likely am I to face an avoidable deficiency?"* It is **not** government approval.
 
-### 🛠️ Fix My Application (example)
+###  Fix My Application (example)
 
 - **Problem:** Income certificate could not be verified with confidence.
 - **Why:** The photo is partly blurred.
@@ -94,11 +94,19 @@ An open estimate from five visible factors: eligibility completeness, document c
 - **Recheck:** Checks re-run automatically and the readiness score updates.
 
 ---
+<img width="1600" height="1520" alt="WhatsApp Image 2026-09-30 at 5 34 34 PM" src="https://github.com/user-attachments/assets/8a43457c-458d-4320-9a99-521d6cc193e5" />
 
 ## 📸 Screenshots
 
-<!-- Drag aarohan-screenshots.jpg into this editor right below this line -->
-<img width="1600" height="1520" alt="WhatsApp Image 2026-09-30 at 5 34 34 PM" src="https://github.com/user-attachments/assets/aae9a63c-ad20-4ffe-915d-506580cab477" />
+- **Landing:** entry screen with one-tap demo and a sample student
+- **Student Dashboard:** personalized scholarship matches and profile completeness
+- **Scholarship Finder:** search and filter schemes, with eligibility reasons
+- **Explainable Eligibility:** every rule checked against the student's profile
+- **Saathi Copilot:** assistant that explains schemes and documents, never decides eligibility
+- **Application Tracking:** status timeline, deficiency alerts and Fix My Application guidance (Hindi UI)
+- **Officer Dashboard:** live verification queue with scrutiny and selection overview
+- **Ministry Analytics:** aggregate KPIs and deficiency insights, with no personal data
+
 
 ---
 
@@ -125,13 +133,13 @@ flowchart TD
 
 **Design choices:** no business logic in the UI, rules live in the database, and slow work (OCR) runs in the background so the screen never freezes.
 
-### 🔑 Golden rule: the AI never decides eligibility
+###  Golden rule: the AI never decides eligibility
 
 | Component | Role |
 |---|---|
-| 🤖 **AI** | Reads, explains, classifies, summarizes |
-| 📐 **Rules engine** | Decides eligibility from official rules |
-| 🧑‍⚖️ **Human officer** | Makes the final decision |
+| **AI** | Reads, explains, classifies, summarizes |
+| **Rules engine** | Decides eligibility from official rules |
+| **Human officer** | Makes the final decision |
 
 ### 📄 Document intelligence pipeline
 
@@ -143,7 +151,15 @@ flowchart LR
 ```
 
 | Tool | Job |
-|---|---|
+|---|---|<img width="1600" height="1520" alt="WhatsApp Image 2026-09-30 at 5 34 34 PM" src="https://github.com/user-attachments/assets/c7a530e1-d96b-429f-bc6c-78b9788b5600" />
+<img width="1600" height="1520" alt="WhatsApp Image 2026-09-30 at 5 34 34 PM" src="https://github.com/user-attachments/assets/0fbc2a54-dc1b-42fe-b9db-c246a01940b6" />
+<img width="1600" height="1520" alt="WhatsApp Image 2026-09-30 at 5 34 34 PM" src="https://github.com/user-attachments/assets/1e8215dc-c32c-4e6b-84a0-73fcf5bbdc23" />
+<img width="1600" height="1520" alt="WhatsApp Image 2026-09-30 at 5 34 34 PM" src="https://github.com/user-attachments/assets/592987db-32a3-4832-8506-bb4f9dbfebb1" />
+<img width="1600" height="1520" alt="WhatsApp Image 2026-09-30 at 5 34 34 PM" src="https://github.com/user-attachments/assets/488b6d27-2a76-4f1a-8a00-bfe05d9686d6" />
+<img width="1600" height="1520" alt="WhatsApp Image 2026-09-30 at 5 34 34 PM" src="https://github.com/user-attachments/assets/b638086b-fc39-4655-a5ff-e53b080f2676" />
+<img width="1600" height="1520" alt="WhatsApp Image 2026-09-30 at 5 34 34 PM" src="https://github.com/user-attachments/assets/d8c7166f-fc31-44c6-b4b2-ddbeb0cb1f8b" />
+<img width="1600" height="1520" alt="WhatsApp Image 2026-09-30 at 5 34 34 PM" src="https://github.com/user-attachments/assets/3d1ca3fe-b559-4682-8620-29c47ed227af" />
+
 | **PaddleOCR** | Main OCR for printed and multilingual text, with text boxes |
 | **Tesseract** | Backup OCR when confidence is low |
 | **TrOCR** | Handwriting, on cropped text-line areas only |
@@ -204,7 +220,7 @@ Uses only retrieved official information · never invents rules, deadlines or am
 
 ---
 
-## 🚀 5. How do we run it?
+##  5. How do we run it?
 
 ```bash
 # 1. Clone
@@ -273,26 +289,26 @@ aarohan/
 
 ## 👥 6. Who is on the team?
 
-| Member | Role | Contribution |
+| Role | Name | Technical Contribution |
 |---|---|---|
-| **Name 1** | Team Lead | Architecture, planning, integration |
-| **Name 2** | Frontend Developer | UI/UX, dashboards, multilingual and accessibility |
-| **Name 3** | Backend Developer | APIs, rules engine, database |
-| **Name 4** | AI / ML Engineer | OCR pipeline, document checks, Copilot (RAG) |
-| **Name 5** | Design / Docs | Presentation, demo flow, documentation |
-| **Name 6** | Tester / Research | Testing, scheme research, data preparation |
+| Team Leader | **Divya** | AI/ML, System Architecture, End-to-End Integration and Team Coordination |
+| AI/ML Engineer | **Sara Sahni** | OCR, Document Intelligence and AI-based Document Verification |
+| AI/ML Engineer | **Rishabh Kumar Singh** | Eligibility Intelligence, Application Readiness and AI-assisted Analysis |
+| Backend Engineer | **Ayush Kumar Gupta** | Backend APIs, Database Design and Application Workflow |
+| Backend Engineer | **Shubham Raj** | Backend Services, API Integration and System Workflow |
+| AI/ML Engineer | **Vyom Soni** | OCR, NLP, Information Extraction and Document Mismatch Detection |
 
 ---
 
 ## 🔭 7. What's next?
 
 ### Future scope
-- 🪪 **DigiLocker / API Setu** verification, QR code and digital-signature checks
-- 🧩 Tamper-suspicion signals and **duplicate-claim detection** across schemes *(these only route cases to a human, they never accuse a student)*
-- 🔗 **NSP sync** and PFMS/DBT payment **simulator**
-- 📱 **Flutter offline-first app** with Indian-language voice (Sarvam AI)
-- 🗣️ More regional and tribal languages
-- 📉 Smarter Ministry advice from repeated deficiency patterns
+- **DigiLocker / API Setu** verification, QR code and digital-signature checks
+- Tamper-suspicion signals and **duplicate-claim detection** across schemes *(these only route cases to a human, they never accuse a student)*
+- **NSP sync** and PFMS/DBT payment **simulator**
+- **Flutter offline-first app** with Indian-language voice (Sarvam AI)
+- More regional and tribal languages
+- Smarter Ministry advice from repeated deficiency patterns
 
 ### How can we improve it?
 - Train OCR and handwriting models on real Indian document samples
@@ -311,6 +327,6 @@ aarohan/
 
 **Smart India Hackathon 2026 · SIH26239 · Ministry of Tribal Affairs**
 
-*AAROHAN: because every eligible student deserves to be found.* 🌄
+*AAROHAN: because every eligible student deserves to be found.*
 
 </div>

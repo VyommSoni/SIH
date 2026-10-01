@@ -106,8 +106,7 @@ An open estimate from five visible factors: eligibility completeness, document c
 - **Officer Dashboard:** live verification queue with scrutiny and selection overview
 - **Ministry Analytics:** aggregate KPIs and deficiency insights, with no personal data
 
-
----
+<img width="1600" height="1520" alt="WhatsApp Image 2026-09-30 at 5 34 34 PM (1)" src="https://github.com/user-attachments/assets/ae1bbe0f-9a17-44c5-a89b-ec6746aff6d5" />
 
 ## ⚙️ 3. How does it work?
 
@@ -210,9 +209,6 @@ Uses only retrieved official information · never invents rules, deadlines or am
 | **Proposed** | Flutter + SQLite, Sarvam AI | Offline-first app, Indian-language voice |
 
 ---
-
-## <img width="1600" height="1520" alt="WhatsApp Image 2026-09-30 at 5 34 34 PM (1)" src="https://github.com/user-attachments/assets/23177414-448e-4cb5-ad08-0ff421141cf3" />
-<img width="1600" height="1520" alt="WhatsApp Image 2026-09-30 at 5 34 34 PM (1)" src="https://github.com/user-attachments/assets/ae1bbe0f-9a17-44c5-a89b-ec6746aff6d5" />
 
  5. How do we run it?
 
